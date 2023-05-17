@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+body {
+    font-family: Lexend, Arial, Helvetica, sans-serif; 
+    margin: auto; 
+    max-width: 2500px;
+    box-sizing: border-box;
+}
+/* Navbar */
+a{
+    text-decoration: none;
+}
+.floatcard {
+    margin: 15px;
+    background-color: #5D25CE;
+    padding: 15px; 
+    border-radius: 15px; /* Adjust this value as needed */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* This creates the floating effect */
+}
+.navbar-brand{
+    margin-left: 5em;
+    letter-spacing: 7px;
+    font-family: lexend;
+}
+.navbar .btn{
+    margin-right: 5em;
+}
+.myContainer{
+    margin: 5em 10em 5em 15em;
+}
+.banner {
+    background: rgb(93,37,206);
+    background: linear-gradient(122deg, rgba(93,37,206,0.10407913165266103) 0%, rgba(255,149,111,0.1) 100%);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* This creates the floating effect */
+    padding: 20px 0;
+    margin: 20px;
+    border-radius: 10px; /* Adjust this value as needed */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* This creates the floating effect */
+
+}
+
+.title-shape{
+    background-color: #FF956F;
+    color: #383838; 
+    padding: 30px;
+    padding-left: 50px;
+    border-radius: 15px 15px 60px 15px; /* Adjust this value as needed */
+    box-shadow: 0px 5px 15px #FF956F; /* This creates the floating effect */
+    margin-right: 10%;
+    width: 40%;
+    max-height: 25vh;
+    letter-spacing: 5px;
+    font-family: Lexend;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+}
+
+.img-fluid{
+    width: 25px; /* Adjust the width as needed */
+    height: 25px;
+    margin-right: 15px;
+    box-shadow: 0 0 5px #FF2F55; 
+    border-radius: 100%; 
+}
+
+.img-from{
+    width: 100px; /* Adjust the width as needed */
+    height: 100px;
+    margin-left: -39px;
+    background-color: #FF956F;
+    box-shadow: 0 0 5px #FF956F; 
+    border-radius: 100%; 
+}
+.img-to{
+    margin-left: -50px; 
+}
+.img-line{
+    width: 25px; /* Adjust the width as needed */
+    height: 25px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    border-radius: 100%; 
+}
+
+.item-text {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #555555; /* Adjust the text color as needed */
+}
+
+.img-fluid:hover{
+    width: 30px; /* Adjust the width as needed */
+    height: 30px;
+    margin-left: -2.5px;
+    z-index: 1;
+    box-shadow: 0 0 10px #FF2F55;   
+    transition: 0.2s;  
+    opacity: 0.8;
+}
+
+
+
+.content-r2{
+    background: rgb(93,37,206);
+    background: linear-gradient(299deg, rgba(93,37,206,0.10407913165266103) 0%, rgba(255,149,111,0.1) 100%);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* This creates the floating effect */
+    padding: 20px 0;
+    min-height: 20vh;
+    margin: 20px;
+    border-radius: 10px; /* Adjust this value as needed */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+    font-family: Lexend;
+    padding: 30px;
+    padding-left: 50px;
+    border-radius: 15px 15px 15px 70px; /* Adjust this value as needed */
+    position: relative;
+}
+
+.content-r2 h6{
+    font-size: larger;
+    padding-right: 5em;
+}
+
+/* 
+.r2-shape{
+    background-color: #FF956F;
+    color: #383838; 
+    padding: 30px;
+    padding-left: 50px;
+    border-radius: 15px 15px 15px 70px;
+    box-shadow: 0px 5px 15px #FF956F; 
+    width: 100%;
+    letter-spacing: 5px;
+    font-family: Lexend;
+    animation: slideInFromLeft 1s ease-in-out;
+    
+} */
+
+
+.content-r2 h2::before {
+    content: "";
+    display: inline-block;
+    height: 40px;
+    margin-left: 1em;
+    border-left: 5px solid #5D25CE;
+    border-radius: 10px;
+    margin-right: 5px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    animation:fadeInFromTop 1s forwards ;
+  }
+
+  .content-r2.animate h2::before {
+    animation: fadeInFromTop 1s forwards;
+}
+
+.illustration img{
+    max-width: 50vh;
+    max-height: 50vh;
+    color: red;
+    
+    
+}
+/* FOR PHONE SIZE */
+
+@media (max-width: 1000px) {
+   
+    .title-shape {
+        width: 90%;
+        margin-left: 10px;
+    }
+    .list-items{
+        margin-top: 50px;
+        margin-left: 10px;
+        animation: slideInFromLeft 1s 0.2s ease-in-out;
+    }
+    .navbar-brand{
+        font-size: 0.9rem;
+        margin-left: 1em;
+        letter-spacing: 3px;
+    }
+    .navbar .btn{
+        margin-right: 1em;
+        font-size: 0.9rem;
+    }
+    
+}
+
+
+/* ANIMATIONS */
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeInFromTop {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      height: 40px;
+      opacity: 1;
+    }
+  }
+  
