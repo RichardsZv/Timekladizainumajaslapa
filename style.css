@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
 body {
     font-family: 'Lexend', Arial, Helvetica, sans-serif; 
     margin: auto; 
@@ -45,109 +46,125 @@ a{
 }
 
 .title-shape{
-    background-color: #FF956F;
-    color: #383838; 
-    padding: 30px;
-    padding-left: 50px;
+    background-color: #FF956F ;
+    padding: 2em;
     border-radius: 15px 15px 60px 15px; /* Adjust this value as needed */
     box-shadow: 0px 5px 15px #FF956F; /* This creates the floating effect */
     margin-right: 10%;
     width: 40%;
-    max-height: 25vh;
+    max-height: 50vh;
+    height: 30vh; 
     letter-spacing: 5px;
     animation: slideInFromLeft 1s ease-in-out;
 }
+.title-shape h1{
+    margin-left: 0.5em;
+    font-size: 50px;
+    color: #383838; 
+    font-weight: 400;
+}
 
-/* TIMELINE */
+
 .container-timeline {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 2em;
+    animation: slideInFromRight 1s ease-in-out;
 }
 .container-timeline::before {
     content: "";
     position: absolute;
-    top: 5px;
-    bottom: 5px;
-    left: 10px;
+    top: 50%;
+    left: 5em;
+    right: 5em;
     border: 3px solid #383838;
 }
-
-
 .item {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 .item a {
     z-index: 1;
 }
 
 .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 25px;
     width: 25px;
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
     border-radius: 50%;
     background-color: #5D25CE;
-    box-shadow: 0 0 3px #5D25CE;   
-    margin-right: 25px;
+    box-shadow: 0 0 3px #5D25CE;
     z-index: 1;
 }
 .dot:hover{
     height: 30px;
     width: 30px;
-    margin-left: -2px;
-    box-shadow: 0 0 6px #5D25CE;   
-    transition: 0.1s;  
+    margin-top: -2px;
+    box-shadow: 0 0 6px #5D25CE;
+    transition: 0.1s;
     z-index: 1;
 }
 
 .img-from{
     width: 100px; /* Adjust the width as needed */
     height: 100px;
-    margin-left: -35px;
-    margin-bottom: 40px;
+    margin-right: 40px;
     background-color: #FF956F;
     box-shadow: 0 0 5px #FF956F; 
     border-radius: 100%; 
     z-index: 1;
 }
 .img-to{
-    margin-left: -50px;
     height: 100px;
     width: 100px;
-    padding-top: 100px;
-    z-index: 1;
+
+}
+.item-text-top {
+    text-align: center;
+    white-space: nowrap !important;
+    color:#383838; 
+    font-size: 20px;
+    margin-top: -3em;
+}
+.item-text-bottom{
+    margin-top: 4em;
+    text-align: center;
+    text-decoration: none;
+    color:#383838; 
+    font-size: 20px;
+    white-space: nowrap !important;
+  
 }
 
 
-.item-text {
-    font-size: 25px;
-    letter-spacing: 2px; /* Adjust the font size as needed */
-    color: #555555; /* Adjust the text color as needed */
-}
 
 .content-r2{
     background: rgb(93,37,206);
     background: linear-gradient(122deg, rgba(93,37,206,0.05) 0%, rgba(255,149,111,0.05) 100%);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* This creates the floating effect */
     padding: 20px 0;
-    min-height: 20vh;
+    min-height: 30vh;
     margin: 20px;
     border-radius: 10px; /* Adjust this value as needed */
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
     
     padding: 30px;
     padding-left: 50px;
-    border-radius: 15px 15px 15px 70px; /* Adjust this value as needed */
     position: relative;
 }
 
-.odd{
-    border-radius: 15px 15px 70px 15px; 
-}
 
 .content-r2 p{
     font-size: 20px;
@@ -183,9 +200,7 @@ li{
     animation:fadeInFromTop 1s forwards ;
 }
 
-.content-r2.animate h2::before {
-    animation: fadeInFromTop 1s forwards;
-}
+
 
 .illustration img{
     max-width: 50vh;
@@ -195,7 +210,7 @@ li{
 
 .card-title{
     text-align: center;
-    color:#383838
+    color:#383838; 
 }
 
 #roadToLU2 h2{
@@ -213,9 +228,33 @@ li{
    padding: 15px; 
    border-radius: 15px; /* Adjust this value as needed */
 }
-
-
-
+.banner-header::before{
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: 15px;
+    left: -6em;
+    border: 3px solid #5D25CE;
+    width: 5em;
+    border-radius: 10px;
+    opacity: 0;
+    animation:slideInFromLeft 1s forwards ;
+}
+.banner-header::after{
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: 15px;
+    right: -6em;
+    border: 3px solid #5D25CE;
+    width: 5em;
+    border-radius: 10px;
+    opacity: 0;
+    animation:slideInFromRight 1s forwards ;
+}
+.banner-header{
+    position: relative;
+}
 .card-image{
     width: 300px;
     height: 300px;
@@ -223,7 +262,11 @@ li{
     margin-bottom: 3em;
     margin-top: 1em;
 }
-
+.card-image:hover{
+    width: 325px;
+    height: 325px;
+    transition: 0.5s;
+}
 .card-light p {
     margin-top: 2em;
     font-weight: 200;
@@ -231,7 +274,6 @@ li{
 
 
 footer {
-    
     left: 0;
     bottom: 0;
     width: 100%;
@@ -255,10 +297,76 @@ footer {
 /* RESPONSIVE SUPPROT */
 
 @media (max-width: 1030px) {
-   
+    /* Timeline */
+    .container-timeline {
+        position: relative;
+        flex-direction: column;
+        
+    }
+
+    .container-timeline::before {
+
+        position: absolute;        
+        top: 5em;
+        bottom: 5em; 
+        left: 25.5%;
+        right: auto; 
+        transform: translateX(-50%);
+    }
+    
+    .item {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        text-align: start; 
+        margin-left: -100px;
+    }
+
+    .dot {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 49.5%;
+        
+    }
+
+    .img-from{
+        margin-right: 0;
+       
+    }
+    .img-to{
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-right: -5px;
+    }
+
+    .item-text {
+        position: relative;
+        margin-top: -18px;
+        margin-left: 200px;
+        text-align: left;
+        white-space: normal;
+    } 
+
+    
+    
+
+    
+    /* Timeline end */
+
+
+    .title-shape h1{
+        margin-left: 5px;
+        font-size: 35px;
+        
+        font-weight: 400;
+    }
     .title-shape {
         width: 90%;
         margin: 5px;
+        max-height: 50vh;
     }
     .padding{
         padding: 1em;
@@ -298,7 +406,12 @@ footer {
         margin-top: 2em;
         margin-left: 2em;
     }
-    
+    .banner-header::before{
+        visibility: hidden;
+    }
+    .banner-header::after{
+        visibility: hidden;
+    }
 }
 
 
