@@ -11,6 +11,12 @@ body {
 a{
     text-decoration: none;
 }
+
+.padding{
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
 .floatcard {
     margin: 15px;
     background-color: #5D25CE;
@@ -30,12 +36,11 @@ a{
 }
 .banner {
     background: rgb(93,37,206);
-    background: linear-gradient(122deg, rgba(93,37,206,0.10407913165266103) 0%, rgba(255,149,111,0.1) 100%);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* This creates the floating effect */
+    background: linear-gradient(122deg, rgba(93,37,206,0.05) 0%, rgba(255,149,111,0.05) 100%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15); /* This creates the floating effect */
     padding: 20px 0;
     margin: 20px;
     border-radius: 10px; /* Adjust this value as needed */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* This creates the floating effect */
 
 }
 
@@ -53,45 +58,70 @@ a{
     animation: slideInFromLeft 1s ease-in-out;
 }
 
-.list-items {
+/* TIMELINE */
+.container-timeline {
+    position: relative;
     display: flex;
     flex-direction: column;
-    animation: slideInFromRight 1s ease-in-out;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.container-timeline::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 10px;
+    border: 3px solid #383838;
 }
 
-.list-item {
+
+.item {
     display: flex;
     align-items: center;
-    
+}
+.item a {
+    z-index: 1;
 }
 
-.img-fluid{
-    width: 25px; /* Adjust the width as needed */
+.dot {
     height: 25px;
-    margin-right: 15px;
-    box-shadow: 0 0 5px #FF2F55; 
-    border-radius: 100%; 
+    width: 25px;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    border-radius: 50%;
+    background-color: #5D25CE;
+    box-shadow: 0 0 3px #5D25CE;   
+    margin-right: 25px;
+    z-index: 1;
+}
+.dot:hover{
+    height: 30px;
+    width: 30px;
+    margin-left: -2px;
+    box-shadow: 0 0 6px #5D25CE;   
+    transition: 0.1s;  
+    z-index: 1;
 }
 
 .img-from{
     width: 100px; /* Adjust the width as needed */
     height: 100px;
-    margin-left: -39px;
+    margin-left: -35px;
+    margin-bottom: 40px;
     background-color: #FF956F;
     box-shadow: 0 0 5px #FF956F; 
     border-radius: 100%; 
+    z-index: 1;
 }
 .img-to{
-    margin-left: -50px; 
+    margin-left: -50px;
+    height: 100px;
+    width: 100px;
+    padding-top: 100px;
+    z-index: 1;
+}
 
-}
-.img-line{
-    width: 25px; /* Adjust the width as needed */
-    height: 30px;
-    margin-top: -3px;
-    margin-bottom: -7px;
-    border-radius: 100%; 
-}
 
 .item-text {
     font-size: 25px;
@@ -99,24 +129,9 @@ a{
     color: #555555; /* Adjust the text color as needed */
 }
 
-.img-fluid:hover{
-    width: 30px; /* Adjust the width as needed */
-    height: 30px;
-    margin-left: -2.5px;
-    z-index: 1;
-    box-shadow: 0 0 10px #FF2F55;   
-    transition: 0.2s;  
-    opacity: 0.8;
-}
-
-.padding{
-    padding-left: 10em;
-    padding-right: 10em;
-}
-
 .content-r2{
     background: rgb(93,37,206);
-    background: linear-gradient(299deg, rgba(93,37,206,0.10407913165266103) 0%, rgba(255,149,111,0.1) 100%);
+    background: linear-gradient(122deg, rgba(93,37,206,0.05) 0%, rgba(255,149,111,0.05) 100%);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* This creates the floating effect */
     padding: 20px 0;
     min-height: 20vh;
@@ -154,10 +169,7 @@ li{
     margin-top: 7em;
 }
 
-
-
 .content-r2 h2::before {
-    
     content: "";
     display: inline-block;
     height: 40px;
@@ -169,9 +181,9 @@ li{
     left: 0;
     opacity: 0;
     animation:fadeInFromTop 1s forwards ;
-  }
+}
 
-  .content-r2.animate h2::before {
+.content-r2.animate h2::before {
     animation: fadeInFromTop 1s forwards;
 }
 
@@ -179,10 +191,30 @@ li{
     max-width: 50vh;
     max-height: 50vh;
     color: red;
-    
-    
 }
-/* FOR PHONE SIZE */
+
+.card-title{
+    text-align: center;
+    color:#383838
+}
+
+.card-light{
+    margin: 15px;
+    /* ADD BACKGROUND */
+    padding: 15px; 
+    border-radius: 15px; /* Adjust this value as needed */
+}
+
+.card-image{
+    width: 300px;
+    height: 300px;
+    border-radius: 45%;
+    margin-bottom: 3em;
+    margin-top: 1em;
+
+}
+
+/* RESPONSIVE SUPPROT */
 
 @media (max-width: 1030px) {
    
@@ -208,6 +240,8 @@ li{
         font-size: 0.9rem;
     }
     .content-r2{
+        background: rgb(93,37,206);
+        background: linear-gradient(122deg, rgba(93,37,206,0.15) 0%, rgba(255,149,111,0.15) 100%);
         padding-left: 2em;
         padding-right: 1em;
     }
@@ -221,6 +255,9 @@ li{
     .bike-img{
         margin-top: 1em;
         padding: 2em;
+    }
+    .container-timeline{
+        margin-top: 2em;
     }
     
 }
