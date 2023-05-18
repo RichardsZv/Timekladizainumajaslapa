@@ -198,12 +198,23 @@ li{
     color:#383838
 }
 
-.card-light{
-    margin: 15px;
-    /* ADD BACKGROUND */
-    padding: 15px; 
-    border-radius: 15px; /* Adjust this value as needed */
+#roadToLU2 h2{
+    margin-top: 2em;
 }
+.bottom-container-margin{
+    margin-bottom: 8em;
+}
+.card-light{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+    /* ADD BACKGROUND */
+   padding: 15px; 
+   border-radius: 15px; /* Adjust this value as needed */
+}
+
+
 
 .card-image{
     width: 300px;
@@ -211,9 +222,36 @@ li{
     border-radius: 45%;
     margin-bottom: 3em;
     margin-top: 1em;
-
 }
 
+.card-light p {
+    margin-top: 2em;
+    font-weight: 200;
+}
+
+
+footer {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 15vh;
+}
+
+.footer-container a {
+    color: white;
+    font-size: 24px;
+}
 /* RESPONSIVE SUPPROT */
 
 @media (max-width: 1030px) {
@@ -258,6 +296,7 @@ li{
     }
     .container-timeline{
         margin-top: 2em;
+        margin-left: 2em;
     }
     
 }
