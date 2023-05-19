@@ -44,20 +44,22 @@ a{
 }
 
 .title-shape{
-    background-color: #FF956F ;
+    /* background-color: #FF956F ; */
     padding: 2em;
     border-radius: 15px 15px 60px 15px; /* Adjust this value as needed */
     box-shadow: 0px 5px 15px #FF956F; /* This creates the floating effect */
+    background-image:url("images/waveee.svg"); 
     margin-right: 10%;
     width: 35%;
     height:20em; 
     letter-spacing: 5px;
     animation: slideInFromLeft 1s ease-in-out;
+    opacity: 0.85;
 }
 .title-shape h1{
     margin-left: 0.5em;
     font-size: 50px;
-    color: #383838; 
+    color:white; 
     font-weight: 400;
 }
 
@@ -460,7 +462,7 @@ li{
     }
     100% {
         transform: translateX(0);
-        opacity: 1;
+        opacity: 0.85;
     }
 }
 
