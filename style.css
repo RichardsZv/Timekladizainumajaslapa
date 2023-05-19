@@ -49,9 +49,8 @@ a{
     border-radius: 15px 15px 60px 15px; /* Adjust this value as needed */
     box-shadow: 0px 5px 15px #FF956F; /* This creates the floating effect */
     margin-right: 10%;
-    width: 40%;
-    max-height: 50vh;
-    height: 30vh; 
+    width: 35%;
+    height:20em; 
     letter-spacing: 5px;
     animation: slideInFromLeft 1s ease-in-out;
 }
@@ -98,7 +97,6 @@ a{
 .dot {
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     height: 25px;
     width: 25px;
@@ -120,7 +118,6 @@ a{
 .img-from{
     width: 100px; /* Adjust the width as needed */
     height: 100px;
-    margin-right: 40px;
     background-color: #FF956F;
     box-shadow: 0 0 5px #FF956F; 
     border-radius: 100%; 
@@ -216,6 +213,14 @@ li{
    padding: 15px; 
    border-radius: 15px; /* Adjust this value as needed */
 }
+.banner:hover .banner-header::before{
+    animation:slideInFromLeft 1s forwards;
+}
+.banner:hover .banner-header::after{
+    animation:slideInFromRight 1s forwards;
+}
+
+
 .banner-header::before{
     content: "";
     position: absolute;
@@ -225,8 +230,6 @@ li{
     border: 3px solid #5D25CE;
     width: 5em;
     border-radius: 10px;
-    opacity: 0;
-    animation:slideInFromLeft 1s forwards ;
 }
 .banner-header::after{
     content: "";
@@ -237,8 +240,8 @@ li{
     border: 3px solid #5D25CE;
     width: 5em;
     border-radius: 10px;
-    opacity: 0;
-    animation:slideInFromRight 1s forwards ;
+   
+    
 }
 .banner-header{
     position: relative;
@@ -260,9 +263,6 @@ li{
     font-weight: 200;
 }
 
-
-
-
 .footer-container {
     margin-top: 5vh;
     border-radius: 10px 10px 0px 0px; 
@@ -282,8 +282,10 @@ li{
     color: #383838;
     font-size:2em;
 }
-
-
+.footer-container a:hover{
+    font-size: 2.1em;
+    transition: 0.1s;
+}
 
 .top-button {
     position: fixed;
@@ -293,7 +295,6 @@ li{
     font-size: 18px;
     text-decoration: none;
     color: #5D25CE;;
-    
     border-radius: 50px;
     border: none;
     transition: background-color 0.3s ease, opacity 0.5s ease, visibility 0.5s;
@@ -311,17 +312,20 @@ li{
 }
 /* RESPONSIVE SUPPROT */
 
-@media (max-width: 1030px) {
+
+
+@media (max-width: 1300px) {
     /* Timeline */
     html,body{
         overflow: auto;
        
     }
-        
+
     .container-timeline {
         position: relative;
         flex-direction: column;
         overflow: hidden;
+        
     }
 
     .container-timeline::before {
@@ -387,7 +391,7 @@ li{
     .title-shape {
         width: 90%;
         margin: 5px;
-        max-height: 50vh;
+        height: 15em;
     }
     .padding{
         padding: 1em;
