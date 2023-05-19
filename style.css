@@ -7,15 +7,16 @@ body {
     margin: auto; 
     max-width: 2500px;
     box-sizing: border-box;
+    overflow-x:hidden;
+    background: rgb(158,158,255);
+background: linear-gradient(90deg, rgba(158,158,255,0.04) 0%, rgba(255,255,255,0.04) 49%, rgba(0,212,255,0.04) 100%);
 }
 /* Navbar */
 a{
     text-decoration: none;
 }
-
 .padding{
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 10em;   
 }
 
 .floatcard {
@@ -32,17 +33,14 @@ a{
 .navbar .btn{
     margin-right: 5em;
 }
-.myContainer{
-    margin: 5em 10em 5em 15em;
-}
+
 .banner {
     background: rgb(93,37,206);
     background: linear-gradient(122deg, rgba(93,37,206,0.05) 0%, rgba(255,149,111,0.05) 100%);
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15); /* This creates the floating effect */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* This creates the floating effect */
     padding: 20px 0;
     margin: 20px;
     border-radius: 10px; /* Adjust this value as needed */
-
 }
 
 .title-shape{
@@ -64,7 +62,6 @@ a{
     font-weight: 400;
 }
 
-
 .container-timeline {
     position: relative;
     display: flex;
@@ -74,6 +71,7 @@ a{
     margin-bottom: 2em;
     animation: slideInFromRight 1s ease-in-out;
 }
+
 .container-timeline::before {
     content: "";
     position: absolute;
@@ -82,6 +80,7 @@ a{
     right: 5em;
     border: 3px solid #383838;
 }
+
 .item {
     display: flex;
     flex-direction: column;
@@ -104,6 +103,7 @@ a{
     height: 25px;
     width: 25px;
     border-radius: 50%;
+    margin-top: 2px;
     background-color: #5D25CE;
     box-shadow: 0 0 3px #5D25CE;
     z-index: 1;
@@ -111,7 +111,7 @@ a{
 .dot:hover{
     height: 30px;
     width: 30px;
-    margin-top: -2px;
+    margin-top: 4px;
     box-shadow: 0 0 6px #5D25CE;
     transition: 0.1s;
     z-index: 1;
@@ -144,45 +144,39 @@ a{
     text-decoration: none;
     color:#383838; 
     font-size: 20px;
-    white-space: nowrap !important;
-  
+    white-space: nowrap;
 }
-
-
-
 .content-r2{
+    position: relative;
     background: rgb(93,37,206);
     background: linear-gradient(122deg, rgba(93,37,206,0.05) 0%, rgba(255,149,111,0.05) 100%);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* This creates the floating effect */
-    padding: 20px 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
     min-height: 30vh;
     margin: 20px;
-    border-radius: 10px; /* Adjust this value as needed */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
-    
+    border-radius: 15px; 
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); 
     padding: 30px;
     padding-left: 50px;
-    position: relative;
 }
-
 
 .content-r2 p{
     font-size: 20px;
     padding-right: 8em;
     font-weight: 200;
-
     line-height: 1.75em;
 }
 li{
     font-size: 20px;
     font-weight: 200;
- 
 }
 
-.content-r2 h2::before:hover{
-    animation:fadeInFromTop 1s forwards ;
+.illustration img{
+    max-width: 50vh;
+    max-height: 50vh;
+    margin-top: 2em;
 }
-.bike-img{
+
+.illustration .bike-img{
     margin-top: 7em;
 }
 
@@ -196,16 +190,10 @@ li{
     margin-right: 5px;
     position: absolute;
     left: 0;
-    opacity: 0;
-    animation:fadeInFromTop 1s forwards ;
 }
 
-
-
-.illustration img{
-    max-width: 50vh;
-    max-height: 50vh;
-    color: red;
+.content-r2:hover h2::before {
+    animation:fadeInFromTop 1s forwards ;
 }
 
 .card-title{
@@ -273,39 +261,71 @@ li{
 }
 
 
-footer {
+
+
+.footer-container {
+    margin-top: 5vh;
+    border-radius: 10px 10px 0px 0px; 
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    margin-top: 5vh;
-}
-
-.footer-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    height: 15vh;
+    gap: 5em;
+    height: 10vh;
+    background: rgb(93,37,206);
+    background: linear-gradient(122deg, rgba(93,37,206,0.05) 0%, rgba(255,149,111,0.05) 100%);
 }
 
 .footer-container a {
-    color: white;
-    font-size: 24px;
+    margin-top: 0.8em;
+    color: #383838;
+    font-size:2em;
+}
+
+
+
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 0.5em 0.8em; 
+    font-size: 18px;
+    text-decoration: none;
+    color: #5D25CE;;
+    
+    border-radius: 50px;
+    border: none;
+    transition: background-color 0.3s ease, opacity 0.5s ease, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.top-button:hover {
+    background-color: white;
+}
+.top-button.show-button {
+    opacity: 0.5;
+    visibility: visible;
 }
 /* RESPONSIVE SUPPROT */
 
 @media (max-width: 1030px) {
     /* Timeline */
+    html,body{
+        overflow: auto;
+       
+    }
+        
     .container-timeline {
         position: relative;
         flex-direction: column;
-        
+        overflow: hidden;
     }
 
     .container-timeline::before {
-
+        margin-right: 0;
         position: absolute;        
         top: 5em;
         bottom: 5em; 
@@ -346,21 +366,22 @@ footer {
         position: relative;
         margin-top: -18px;
         margin-left: 200px;
+        margin-right: 0;
         text-align: left;
         white-space: normal;
     } 
 
     
-    
-
-    
     /* Timeline end */
 
-
+    .card-image{
+        width: 250px;
+        height: 250px;
+       
+    }
     .title-shape h1{
         margin-left: 5px;
         font-size: 35px;
-        
         font-weight: 400;
     }
     .title-shape {
@@ -380,6 +401,12 @@ footer {
         font-size: 0.9rem;
         margin-left: 1em;
         letter-spacing: 3px;
+    }
+
+    .illustration img{
+        max-width: 40vh;
+        max-height: 40vh;
+        
     }
     .navbar .btn{
         margin-right: 1em;
@@ -406,12 +433,17 @@ footer {
         margin-top: 2em;
         margin-left: 2em;
     }
+    .banner-header{
+        text-align: center;
+    }
     .banner-header::before{
-        visibility: hidden;
+        display: none;
     }
     .banner-header::after{
-        visibility: hidden;
+      
+        display: none;
     }
+    
 }
 
 
