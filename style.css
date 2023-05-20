@@ -178,6 +178,16 @@ li{
 .illustration .bike-img{
     margin-top: 7em;
 }
+.illustration .clock-img{
+    width: 300px;
+    height: 300px;
+  
+}
+.clock-img:hover{
+    transform: rotate(370deg);
+    transition: 1s;
+}
+    
 
 .content-r2 h2::before {
     content: "";
@@ -394,6 +404,7 @@ li{
         width: 90%;
         margin: 5px;
         height: 15em;
+        
     }
     .padding{
         padding: 1em;
