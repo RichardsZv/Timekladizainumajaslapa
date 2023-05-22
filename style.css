@@ -78,7 +78,8 @@ a{
     position: absolute;
     top: 50%;
     left: 5em;
-    right: 5em;
+    right: 118px;
+    border-radius: 10px;
     border: 3px solid #383838;
 }
 
@@ -126,9 +127,10 @@ a{
     z-index: 1;
 }
 .img-to{
-    height: 100px;
-    width: 100px;
-
+    height: 130px;
+    width: 130px;
+    z-index: 1;
+    margin-left: -10px;
 }
 .item-text-top {
     text-align: center;
@@ -322,6 +324,87 @@ li{
     opacity: 0.5;
     visibility: visible;
 }
+
+.readMoreBtn{
+    color:#FF956F;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 10px;
+    border: 1px solid #FF956F;
+    opacity: 0.8;
+}
+.readMoreBtn:hover { 
+    color: #fffbf6;
+    background-color: #FF956F; 
+}
+.hidden {
+    display: none;
+}
+
+.dialog {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* This creates the floating effect */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dialog-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fffbf6;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 900%;
+    max-width: 1000px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dialog-image {
+    width: 35%;
+    border-radius: 40%;
+    height: auto;
+}
+
+.dialog-title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.fullText{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+}
+
 /* RESPONSIVE SUPPROT */
 
 
@@ -332,7 +415,9 @@ li{
         overflow: auto;
        
     }
-
+    .dialog-content {
+        width: 90%;
+    }
     .container-timeline {
         position: relative;
         flex-direction: column;
@@ -344,8 +429,8 @@ li{
         margin-right: 0;
         position: absolute;        
         top: 5em;
-        bottom: 5em; 
-        left: 25.5%;
+        bottom: 9.5em; 
+        left: 32.5%;
         right: auto; 
         transform: translateX(-50%);
     }
@@ -364,13 +449,13 @@ li{
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 49.5%;
+        left: 54.5%;
         
     }
 
     .img-from{
         margin-right: 0;
-       
+       margin-left: 30px;
     }
     .img-to{
       margin-top: 30px;

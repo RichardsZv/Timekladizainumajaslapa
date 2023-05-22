@@ -41,6 +41,25 @@ window.onscroll = function() {
   }
 };
 
+
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('readMoreBtn')) {
+        const dialog = e.target.parentElement.querySelector('.dialog');
+        dialog.style.display = "block";
+    }
+    
+    if (e.target.classList.contains('close-btn')) {
+        const dialog = e.target.closest('.dialog');
+        dialog.style.display = "none";
+    }
+});
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('dialog')) {
+        event.target.style.display = "none";
+    }
+}
 // var canvas = document.getElementById("canvas"),
 //     ctx = canvas.getContext('2d');
 
