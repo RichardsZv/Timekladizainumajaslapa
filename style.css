@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
     overflow-x:hidden;
     background: rgb(158,158,255);
-background: linear-gradient(90deg, rgba(158,158,255,0.04) 0%, rgba(255,255,255,0.04) 49%, rgba(0,212,255,0.04) 100%);
+    background: linear-gradient(90deg, rgba(158,158,255,0.04) 0%, rgba(255,255,255,0.04) 49%, rgba(0,212,255,0.04) 100%);
 }
 /* Navbar */
 a{
@@ -23,8 +23,8 @@ a{
     margin: 15px;
     background-color: #5D25CE;
     padding: 15px; 
-    border-radius: 15px; /* Adjust this value as needed */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* This creates the floating effect */
+    border-radius: 15px; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 .navbar-brand{
     margin-left: 5em;
@@ -40,17 +40,17 @@ a{
 .banner {
     background: rgb(93,37,206);
     background: linear-gradient(122deg, rgba(93,37,206,0.05) 0%, rgba(255,149,111,0.05) 100%);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* This creates the floating effect */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); 
     padding: 20px 0;
     margin: 20px;
-    border-radius: 10px; /* Adjust this value as needed */
+    border-radius: 10px; 
 }
 
 .title-shape{
     /* background-color: #FF956F ; */
     padding: 2em;
-    border-radius: 15px 15px 60px 15px; /* Adjust this value as needed */
-    box-shadow: 0px 5px 15px #FF956F; /* This creates the floating effect */
+    border-radius: 15px 15px 60px 15px; 
+    box-shadow: 0px 5px 15px #FF956F; 
     background-image:url("images/waveee.svg"); 
     margin-right: 10%;
     width: 35%;
@@ -123,7 +123,7 @@ a{
 }
 
 .img-from{
-    width: 100px; /* Adjust the width as needed */
+    width: 100px; 
     height: 100px;
     background-color: #FF956F;
     box-shadow: 0 0 5px #FF956F; 
@@ -229,7 +229,7 @@ li{
    flex-direction: column;
     /* ADD BACKGROUND */
    padding: 15px; 
-   border-radius: 15px; /* Adjust this value as needed */
+   border-radius: 15px; 
 }
 .banner:hover .banner-header::before{
     animation:slideInFromLeft 1s forwards;
@@ -354,19 +354,19 @@ li{
     width: 100%;
     height: 100%;
     overflow: auto;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* This creates the floating effect */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); 
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .dialog-content {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fffbf6;
     padding: 20px;
     border: 1px solid #888;
-    width: 900%;
+    width: 90%;
     max-width: 1000px;
     border-radius: 10px;
     display: flex;
@@ -392,22 +392,23 @@ li{
 }
 
 .dialog-image {
-    width: 45%;
+    width: 30%;
     margin-top: 10px;
     border-radius: 40%;
     height: auto;
 }
 
 .dialog-title {
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
+    font-size: 30px
 }
 
 .fullText{
     text-align: left;
+    font-size: 16px;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 30px;
 }
 
 /* RESPONSIVE SUPPROT */
@@ -551,7 +552,9 @@ li{
       
         display: none;
     }
-    
+    .dialog-content {
+        top: 100%;
+    }
 }
 
 
