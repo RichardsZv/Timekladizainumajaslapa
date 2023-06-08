@@ -189,7 +189,7 @@ li{
 .illustration .clock-img{
     width: 300px;
     height: 300px;
-    margin-top: 7em;
+    margin-top: 5em;
 }
 .clock-img:hover{
     transform: rotate(370deg);
