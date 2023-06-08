@@ -19,6 +19,7 @@ a{
     padding-left: 10em;   
 }
 
+
 .floatcard {
     margin: 15px;
     background-color: #5D25CE;
@@ -35,6 +36,7 @@ a{
 }
 .navbar .btn{
     margin-right: 5em;
+    border-radius: 79px;
 }
 
 .banner {
@@ -57,7 +59,7 @@ a{
     height:20em; 
     letter-spacing: 5px;
     animation: slideInFromLeft 1s ease-in-out;
-    opacity: 0.85;
+    opacity: 0.8;
 }
 .title-shape h1{
     margin-left: 0.5em;
@@ -187,7 +189,7 @@ li{
 .illustration .clock-img{
     width: 300px;
     height: 300px;
-  
+    margin-top: 7em;
 }
 .clock-img:hover{
     transform: rotate(370deg);
@@ -364,7 +366,9 @@ li{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fffbf6;
-    padding: 20px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border: 1px solid #888;
     width: 90%;
     max-width: 1000px;
@@ -373,7 +377,7 @@ li{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    position: relative;
+    /* position: relative; */
 }
 .close-btn {
     color: #aaa;
@@ -401,7 +405,7 @@ li{
 .dialog-title {
     margin-top: 15px;
     text-align: center;
-    font-size: 30px
+    font-size: 30px;
 }
 
 .fullText{
@@ -410,7 +414,12 @@ li{
     margin-left: 10%;
     margin-right: 10%;
 }
-
+li{
+    list-style-type:circle;   
+   }
+   .content-r2 p b{
+       color: #6F3FD4;
+   }
 /* RESPONSIVE SUPPROT */
 
 
@@ -440,7 +449,7 @@ li{
         right: auto; 
         transform: translateX(-50%);
     }
-    
+ 
     .item {
         flex-direction: row;
         justify-content: flex-end;
@@ -450,6 +459,7 @@ li{
         text-align: start; 
         margin-left: -100px;
     }
+
 
     .dot {
         position: absolute;
@@ -511,7 +521,6 @@ li{
         margin-left: 1em;
         letter-spacing: 3px;
     }
-
     .illustration img{
         max-width: 40vh;
         max-height: 40vh;
@@ -534,8 +543,14 @@ li{
         margin-left: 0.4em;
         
     }
-    .bike-img{
-        margin-top: 1em;
+    .illustration .bike-img{
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding: 2em;
+    }
+    .illustration .clock-img{
+        margin-top: 2em;
+        margin-bottom: 2em;
         padding: 2em;
     }
     .container-timeline{
@@ -591,4 +606,17 @@ li{
       opacity: 1;
     }
   }
-  
+
+
+/*   
+Scroll animation */
+.hiddenAnim {
+    opacity: 0;
+    filter:blur(5px);
+    transition: all 1s;
+}
+.showAnim{
+    opacity: 1;
+    filter: blur(0px); 
+}
+

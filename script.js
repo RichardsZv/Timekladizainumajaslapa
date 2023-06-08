@@ -61,3 +61,20 @@ window.onclick = function(event) {
         event.target.style.display = "none";
     }
 }
+
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add('showAnim');
+        }
+        else{
+            target.classList.remove('showAnim');
+        }
+    });
+});
+
+const elements = document.querySelectorAll('.hiddenAnim');
+
+elements.forEach((el)=>observer.observe(el));
