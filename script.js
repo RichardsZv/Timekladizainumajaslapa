@@ -70,7 +70,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('showAnim');
         }
         else{
-            target.classList.remove('showAnim');
+            entry.target.classList.remove('showAnim');
         }
     });
 });

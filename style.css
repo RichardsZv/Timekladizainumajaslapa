@@ -613,7 +613,7 @@ Scroll animation */
 .hiddenAnim {
     opacity: 0;
     filter:blur(5px);
-    transition: all 1s;
+    transition: all 0.6s;
 }
 .showAnim{
     opacity: 1;
